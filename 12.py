@@ -19,7 +19,6 @@ for item in n:
             equal_to_avg.append(item)
 
 print("Numbers less than Average Value: {}".format(', '.join([str(x) for x in less_than_avg])))
-print(greater_than_avg)
-print(equal_to_avg)
-if __name__ == '__main__':
-    pass
+print("Numbers greater than Average Value: {}".format(', '.join([str(x) for x in greater_than_avg])))
+print("Numbers Equal to Average Value: {}".format(', '.join([str(x) for x in equal_to_avg])))
+
