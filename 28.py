@@ -7,7 +7,21 @@ Example :- "This is Python"
     i = 2
     o =1
 '''
+s = "This is Python".split()
+s = ''.join(s)
+s = list(s)
+d = {
+    'a':0,
+    'e':0,
+    'i':0,
+    'o':0,
+    'u':0
+}
 
+for el in s:
+    if el in d.keys():
+        d[el] += 1
 
+print(d)
 if __name__ == '__main__':
     pass
