@@ -3,7 +3,6 @@ __doc__ = 'Write a program to find the number is Prime or not.'
 def find_prime(num):
     if num == 1 or num == 0 or not num%2:
         return "Not Prime"
-
     if num == 2:
         return "Prime"
     if num%2:

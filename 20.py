@@ -4,8 +4,17 @@ __doc__ = '''Write a program to generate Fibonacci series of numbers.
    a) Number of elements printed in the series should be N numbers, Where N is any +ve integer.
    b) Generate the series until the element in the series is less than Max number.
 '''
-
-
+fib_holder = []
+def fib(n, max_num):
+      fib_holder = []
+      a, b = 0, 1      
+      for _ in range(n):
+            fib_holder.append(a)
+            if max_num < fib_holder[-1]:
+                  fib_holder.pop()
+                  return fib_holder            
+            a, b = b, a + b
+      return fib_holder
 
 if __name__ == '__main__':
-    pass
+  print(*fib(10, 30))
