@@ -1,6 +1,7 @@
-57. From the Standard Exception Table of Tutorials: Try implementing all (25 ) exceptions in you program.
+'''57. From the Standard Exception Table of Tutorials: Try implementing all (25 ) exceptions in you program.
       Note: Some exceptions might not work on your system.
-Ans:
+'''
+
 import math
 import sys
 import time
@@ -8,101 +9,101 @@ import time
 try:
     op=2/b
 except Exception:
-    print"Exception"
+    print("Exception")
 #Standard error
 try:
-    f=open("xyz.txt",r)
+    f = open("xyz.txt", r)
 except StandardError:
-    print "Standard error:No file exists"
+    print("Standard error:No file exists")
 
 #Arithmetic error
 try:
     a=9/0
 except ArithmeticError:
-    print "Arithmetic error exception"
+    print("Arithmetic error exception")
 
 #StopIteration
 try:
     f=open('abc.txt','r')
     for i in range(1,100):
-        print f.next()
+        print(f.next())
 except StopIteration:
-    print "Stop Iteration Exception"
+    print("Stop Iteration Exception")
 f.close()
 #Systemexit
 try:
     sys.exit()
 except SystemExit:
-    print "system exit exception"
+    print("system exit exception")
 
 
 #Overflow error
 try:
     a=math.exp(-5/3*5251321)
 except OverflowError:
-    print "Overflow error exception"
+    print("Overflow error exception")
 
 #Value error
 try:
     a=math.sqrt(-5/3)
 except ValueError:
-    print "ValueError"
+    print("ValueError")
 
 #Overflow error
 try:
     a=math.exp(-2*100000000000000*123456)
 except OverflowError:
-    print "overflowerrror" 
+    print("overflowerrror" )
 #Zero division error
 try:
     a=2/0
 except ZeroDivisionError:
-    print "Zero Division exception"
+    print("Zero Division exception")
 
 #AssertionErrror
 try:
     a=123
     assert (a<50),"assertion error"
 except AssertionError:
-    print "Assertion error"
+    print("Assertion error")
 #Attribute Error
 try:
     raise AttributeError
 except AttributeError:
-    print "Attribute error"    
+    print("Attribute error" )   
 #EOF error
 try:
     f=open("abc.txt",'r')
     f.read()
 except EOFError:
-    print "EOF error"
+    print("EOF error")
 
 #import error
 try:
     import asdf
 except ImportError:
-    print "Import error exception"
+    print("Import error exception")
 
 
 
 #look up error
 dict = {'asdf':'txt'}
 try:
-    print dict['in']
+    print(dict['in'])
 except LookupError:
-    print 'Lookup error' 
+    print('Lookup error' )
 #index error
 try:
     l1=[1,2,3]
-    print l1[8]
+    print(l1[8])
 except IndexError:
-    print "IndexOutofbound"
+    print("IndexOutofbound")
 
 #name error:
 try:
-    print d
+    print(d)
 except NameError:
-    print "Name Error"  
+    print("Name Error"  )
     
 #keyboard interrupt
 
@@ -110,48 +111,48 @@ try:
     x=input()
     time.sleep(5)
 except KeyboardInterrupt:
-    print "Keyboard interrupt"
+    print("Keyboard interrupt")
 
 #KeyError
 try:
-    print dict['a']
+    print(dict['a'])
 except:
-    print 'Key Error'
+    print('Key Error')
 
 #Unbound Local Error
 try:
     raise UnboundLocalError
 except UnboundLocalError:
-    print 'UnboundLocalError!'
+    print('UnboundLocalError!')
 #IOError
 try:
     f = open('asdf.txt', 'r')
     f.write('something')
 except IOError:
-    print 'IOError!'
+    print('IOError!')
 
 #SyntaxError
 try:
     raise SyntaxError
 except SyntaxError:
-    print 'Syntax Error !'
+    print('Syntax Error !')
 
 #TypeError
 try:
     a = 'string'
     a = a-2
 except TypeError:
-    print 'Type Error'
+    print('Type Error')
 
 #ValueError
 try:
     a = 'string'
-    print int(a)
+    print(int(a))
 except ValueError:
-    print 'Value Error'
+    print('Value Error')
 
 #Runtime Error
 try:
     raise RuntimeError
 except RuntimeError:
-    print 'Runtime Error occured !' 
+    print('Runtime Error occured !' )

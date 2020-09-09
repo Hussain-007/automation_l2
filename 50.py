@@ -1,8 +1,8 @@
-50. Write a program to open the existing file in read mode and perform following tasks,
-      a) Rad 10 character at a time and then print its current position of file object. Repeat this operation till the EOF.
+'''50. Write a program to open the existing file in read mode and perform following tasks,
+      a) Rad 10 character at a time and then print(its current position of file object. Repeat this operation till the EOF.
         b) Reset the file pointer after reading 100 Character from file ( Use Seek function to reset)
         c) Open the file in read mode and start printing the contents from 5th line onwards.
-Ans:
+'''
 #a
 myfile = open("output.txt", "r")
 pointer = 0
@@ -11,9 +11,9 @@ while(True):
     if not c:
         break
     else:
-        print c
+        print(c)
         pointer += 10
-        print pointer
+        print(pointer)
 #b
 myfile = open("output.txt", "r")
 pointer = 0
@@ -22,16 +22,16 @@ while(pointer<100):
     if not c:
         break
     else:
-        print c
+        print(c)
         pointer += 10
-        print pointer
+        print(pointer)
         
 myfile.seek(0,0)
-print myfile.read(10)
+print(myfile.read(10))
 #c
 myfile = open("output.txt", "r")
 for i in range(5):
     myfile.readline()
     
 for line in myfile:
-    print line
+    print(line)

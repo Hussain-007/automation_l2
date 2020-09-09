@@ -1,10 +1,11 @@
-49. Write a program to perform  following file operations
+'''49. Write a program to perform  following file operations
 a) Open the file in read mode and read all its contents on to STDOUT.
 b) Open the file in write mode and enter 5 new lines of strings in to the new file.
 c) Open file in Append mode and add 5 lines of text into it.
-Ans:
+'''
+
 myfile = open("output.txt", "r")
-print myfile.read()
+print(myfile.read())
 myfile.close()
 
 myfile = open("sample.txt", "w")
